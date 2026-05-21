@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Cabeçalho técnico do documento -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - EcoGuia</title>
+    <!-- Importação dos arquivos de estilização CSS -->
+    <link rel="stylesheet" href="../css/variaveis.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/header-footer.css" />
+    <link rel="stylesheet" href="../css/solucao.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho principal com logotipo e navegação -->
+    <header class="cabecalho">
+      <div class="container">
+        <a href="../index.html" class="logo-link">
+          <img src="../img/alma.png" alt="Logo SoulUp" class="logo-img" />
+          <h1 class="logo">EcoGuia</h1>
+        </a>
+        <nav class="menu-navegacao">
+          <ul>
+            <li><a href="../html/index.html">Início</a></li>
+            <li><a href="../html/sobre.html">Sobre o Motor</a></li>
+            <li><a href="../html/faq.html">FAQ</a></li>
+            <li><a href="../html/contato.html">Contato</a></li>
+            <li><a href="../html/integrantes.html">Equipe</a></li>
+            <li class="separador-menu">
+              <a href="../html/solucao-dashboard.html">Painel do Usuário</a>
+            </li>
+            <li><a href="../html/marcos.html">Marcos</a></li>
+          </ul>
+        </nav>
+        <button class="btn-menu-mobile">☰</button>
+      </div>
+    </header>
+    <!-- Conteúdo principal da página -->
+    <!-- Container que está englobando todos os elementos. -->
+    <main class="dashboard-main">
+      <section class="perfil-section">
+        <div class="card-perfil-amplo">
+          <div class="bloco-usuario">
+            <div class="avatar-container">
+              <div class="aura-radial"></div>
+              <div class="avatar-wrapper">
+                <div class="icone-fallback">👤</div>
+                <div class="nivel-badge" title="Nível da Alma">4</div>
+              </div>
+            </div>
+            <!-- Informações dos usuários -->
+            <div class="info-container">
+              <div class="header-perfil">
+                <h2>Julio César</h2>
+                <span class="ofensiva-badge">🔥 15 dias</span>
+              </div>
+              <p class="frase-status">
+                Este perfil está a <span>15 dias</span> salvando o planeta.
+              </p>
+            </div>
+          </div>
+
+          <div class="bloco-alma">
+            <img
+              src="../img/alma.png"
+              alt="Alma Digital"
+              class="alma-flutuante"
+            />
+            <span class="alma-status">Avatar Nível 4</span>
+          </div>
+        </div>
+      </section>
+      <!-- Sessão dos cards -->
+      <section class="cards-container">
+        <div class="metrica-card">
+          <span class="valor">12.5 kg</span>
+          <span class="rotulo">CO2 Evitado</span>
+        </div>
+        <div class="metrica-card">
+          <span class="valor">8.2 kg</span>
+          <span class="rotulo">Resíduos Desviados</span>
+        </div>
+        <div class="metrica-card">
+          <span class="valor">Nível 4</span>
+          <span class="rotulo">Status do Avatar</span>
+        </div>
+      </section>
+      <section class="explicacao-tecnica">
+        <div class="header-explicacao">
+          <h3>Sobre o Dashboard</h3>
+        </div>
+        <div class="conteudo-explicacao">
+          <div class="bloco-texto">
+            <h4>O Problema</h4>
+            <p>
+              Ações sustentáveis individuais geram dados fragmentados e
+              invisíveis. O usuário comum não possui um mecanismo centralizado e
+              confiável para quantificar, auditar e exibir seu impacto ambiental
+              (como volume de CO2 evitado e resíduos desviados) de forma
+              tangível.
+            </p>
+          </div>
+          <div class="bloco-texto">
+            <h4>A Solução</h4>
+            <p>
+              O Dashboard atua como um painel de monitoramento de dados em tempo
+              real. Ele consolida os registros validados pelo Motor de Reputação
+              e os traduz em métricas exatas e em um estado visual (Aura
+              Digital). Isso fornece um registro auditável e contínuo do
+              engajamento do usuário.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+ <!-- Rodapé da página com os direitos autorais -->
+    <footer class="rodape">
+      <div class="container">
+        <p>&copy; 2026 SoulUp - Dashboard de Impacto Verificado</p>
+      </div>
+    </footer>
+    <button id="btn-voltar-topo" aria-label="Voltar ao topo">↑</button>
+    <script src="../js/menu.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

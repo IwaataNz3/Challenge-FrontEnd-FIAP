@@ -1,0 +1,386 @@
+/* ==========================================================================
+   1. LAYOUT GERAL
+   ========================================================================== */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #f8fafc;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(16, 185, 129, 0.03) 0%,
+      transparent 80%
+    ),
+    #f8fafc;
+}
+
+/* ==========================================================================
+   2. CARD PRINCIPAL
+   ========================================================================== */
+.card-perfil-amplo {
+  background: #ffffff;
+  width: 100%;
+  max-width: 950px;
+  padding: 3rem 4rem;
+  border-radius: 28px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.02),
+    0 0 30px rgba(16, 185, 129, 0.02);
+  margin-bottom: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.card-perfil-amplo:hover {
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   3. BLOCO DO USUÁRIO E AVATAR
+   ========================================================================== */
+.bloco-usuario {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.avatar-container {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.icone-fallback {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+  color: #94a3b8;
+  border: 6px solid #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.nivel-badge {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: var(--cor-primaria);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.aura-radial {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: -12px;
+  background: radial-gradient(
+    circle,
+    var(--cor-primaria) 0%,
+    #34d399 65%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  z-index: 1;
+  filter: blur(12px);
+  opacity: 0.6;
+  animation: pulsarAura 3s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   4. TEXTOS E STATUS DO PERFIL
+   ========================================================================== */
+.info-container {
+  text-align: left;
+}
+
+.header-perfil {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.header-perfil h2 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.ofensiva-badge {
+  background: #fff7ed;
+  color: #c2410c;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: 1px solid #ffedd5;
+}
+
+.frase-status {
+  font-size: 1.25rem;
+  color: #475569;
+  margin: 0;
+  font-weight: 500;
+}
+
+.frase-status span {
+  color: var(--cor-primaria);
+  font-weight: 800;
+  background-color: rgba(16, 185, 129, 0.08);
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+/* ==========================================================================
+   5. BLOCO DO MASCOTE (A ALMA)
+   ========================================================================== */
+.bloco-alma {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 3rem;
+  border-left: 2px dashed #e2e8f0;
+  text-align: center;
+  min-width: 150px;
+}
+
+.alma-flutuante {
+  width: 100px;
+  height: auto;
+  filter: drop-shadow(0 0 15px rgba(16, 185, 129, 0.3));
+  animation: flutuarAlma 3s ease-in-out infinite;
+  margin-bottom: 10px;
+}
+
+.alma-status {
+  font-size: 0.8rem;
+  color: var(--cor-primaria);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 15px;
+  display: block;
+}
+
+/* ==========================================================================
+   6. CARDS INFERIORES DE MÉTRICAS
+   ========================================================================== */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 950px;
+}
+
+.metrica-card {
+  background: #ffffff;
+  flex: 1;
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.metrica-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.metrica-card .valor {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--cor-primaria);
+  margin-bottom: 0.3rem;
+}
+
+.metrica-card .rotulo {
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   7. ANIMAÇÕES
+   ========================================================================== */
+@keyframes pulsarAura {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 0.7;
+  }
+}
+
+@keyframes flutuarAlma {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ==========================================================================
+   8. RESPONSIVIDADE (TABLET E MOBILE)
+   ========================================================================== */
+/* 1. Mobile: até 480px */
+@media (max-width: 480px) {
+  .card-perfil-amplo {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .bloco-usuario {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .bloco-alma {
+    border-left: none;
+    border-top: 2px dashed #e2e8f0;
+    padding-left: 0;
+    padding-top: 1.5rem;
+    width: 100%;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* 2. Tablet: de 768px a 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .card-perfil-amplo {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 2.5rem;
+    gap: 2.5rem;
+  }
+
+  .bloco-usuario {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .bloco-alma {
+    border-left: none;
+    border-top: 2px dashed #e2e8f0;
+    padding-left: 0;
+    padding-top: 2rem;
+    width: 100%;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+/* 3. Desktop: a partir de 992px */
+@media (min-width: 992px) {
+  /* Mantém o comportamento horizontal original (o padrão fora das media queries) */
+}
+
+/* Desktops em modo janela */
+@media (max-width: 900px) {
+  /* Transforma o card de perfil horizontal em vertical */
+  .card-perfil-amplo {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem;
+    gap: 3rem;
+  }
+
+  /* Ajusta o bloco do usuário para empilhar itens */
+  .bloco-usuario {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .info-container {
+    text-align: center;
+  }
+
+  .header-perfil {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Ajusta o separador da alma: de lateral para superior */
+  .bloco-alma {
+    border-left: none;
+    border-top: 2px dashed #e2e8f0;
+    padding-left: 0;
+    padding-top: 2rem;
+    width: 100%;
+  }
+
+  /* Empilha os cards de métricas verticalmente */
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .metrica-card {
+    width: 100%;
+  }
+}
