@@ -1,0 +1,145 @@
+/* ==========================================================================
+   1. CABEÇALHO E TÍTULOS (HEADER)
+   ========================================================================== */
+
+/* Centralização do Cabeçalho e da Alminha */
+.marcos-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  text-align: center; /* Centraliza o texto */
+  padding: 4rem 0 2rem;
+}
+
+.header-titulo-flex {
+  display: flex;
+  flex-direction: column; /* Coloca a alma em cima do título */
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 1rem;
+}
+
+.alma-header {
+  height: 120px; /* Tamanho maior para destaque central */
+  width: auto;
+  filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.2));
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+.marcos-header h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--cor-texto-principal);
+  margin: 0;
+}
+
+.marcos-header p {
+  max-width: 600px; /* Evita que o texto fique muito largo e estranho */
+  color: var(--cor-texto-secundario);
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* ==========================================================================
+   2. ESTRUTURA DO GRID E CARDS DE MARCOS
+   ========================================================================== */
+
+.grid-marcos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 2rem 0;
+}
+
+.marco-card {
+  background: var(--cor-fundo-card);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   3. ELEMENTOS INTERNOS DOS CARDS (ÍCONES, TEXTOS E PROGRESSO)
+   ========================================================================== */
+
+.icon-box {
+  font-size: 2rem;
+  background: #f1f5f9;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.marco-info h4 {
+  margin: 0 0 5px 0;
+  color: var(--cor-texto-principal);
+}
+
+.marco-info p {
+  font-size: 0.9rem;
+  color: var(--cor-texto-secundario);
+  margin-bottom: 10px;
+}
+
+/* Barra de progresso para metas não atingidas */
+.progresso-mini {
+  background: #e2e8f0;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progresso-mini .barra {
+  background: var(--cor-primaria);
+  height: 100%;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   4. RESPONSIVIDADE (MOBILE, TABLET E DESKTOP)
+   ========================================================================== */
+
+/* Layout funcional no Mobile (até 480px) */
+@media (max-width: 480px) {
+  .marcos-header {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .marcos-header h2 {
+    font-size: 2rem; /* Adequa o tamanho da fonte para não estourar a tela */
+  }
+
+  .alma-header {
+    height: 90px; /* Reduz a alma digital levemente no mobile */
+  }
+
+  .grid-marcos {
+    grid-template-columns: 1fr; /* Força os cards a ocuparem a largura total no mobile */
+    gap: 15px;
+  }
+
+  .marco-card {
+    flex-direction: column; /* Empilha o ícone e o texto verticalmente para melhor leitura */
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Layout adaptado para Tablet (≥768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* O comportamento do "auto-fit" do grid já resolve o tablet. */
+}
+
+/* Layout consistente no Desktop (≥992px) */
+@media (min-width: 992px) {
+  /* A estrutura já assegura a coerência em monitores maiores 
+     sem cortes ou desalinhamentos. */
+}
