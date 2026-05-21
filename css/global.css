@@ -1,0 +1,137 @@
+/* Reset e Configurações Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cor-fundo-principal);
+  color: var(--cor-texto-principal);
+  font-family: var(--fonte-principal);
+  line-height: 1.6;
+  overflow-x: hidden; /* Evita scroll horizontal acidental */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tipografia Padrão */
+h1,
+h2,
+h3 {
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+/* Botões Globais */
+.btn-primario {
+  display: inline-block;
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primario:hover {
+  background-color: var(--cor-primaria-hover);
+}
+
+/* ==========================================================================
+   EXPLICAÇÃO TÉCNICA (DASHBOARD E MARCOS)
+   ========================================================================== */
+
+.explicacao-tecnica {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid #e2e8f0;
+  width: 100%;
+}
+
+.header-explicacao h3 {
+  font-size: 1.8rem;
+  color: var(--cor-texto-principal);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.conteudo-explicacao {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.bloco-texto {
+  background-color: var(--cor-fundo-card, #ffffff);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.bloco-texto h4 {
+  color: var(--cor-primaria, #10b981);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.bloco-texto p {
+  color: var(--cor-texto-secundario);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* ==========================================================================
+   BOTÃO VOLTAR AO TOPO
+   ========================================================================== */
+#btn-voltar-topo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none; /* Escondido por padrão */
+  background-color: var(--cor-primaria, #10b981);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+#btn-voltar-topo:hover {
+  background-color: #059669; /* Tom mais escuro no hover */
+  transform: translateY(-5px);
+}
+
+/* Classe ativada pelo JavaScript para mostrar o botão */
+#btn-voltar-topo.mostrar {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
