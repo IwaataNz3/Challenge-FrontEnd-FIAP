@@ -1,0 +1,275 @@
+/* ==========================================================================
+   1. SEÇÃO HERO (INÍCIO)
+   ========================================================================== */
+
+.hero {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center; /* CORREÇÃO: Força o contêiner Flex a centralizar tudo na tela */
+  background: radial-gradient(
+    circle at center top,
+    #e6f4ea 0%,
+    var(--cor-fundo-principal) 70%
+  );
+  padding: 2rem 0;
+}
+
+/* Layout em duas colunas: Texto e Imagem */
+.hero-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* CORREÇÃO: Pega toda a largura disponível... */
+  max-width: 1200px; /* CORREÇÃO: ...mas trava no limite do layout original */
+  padding: 0 20px; /* CORREÇÃO: Garante uma margem de segurança nas laterais */
+  gap: 50px;
+}
+
+.hero-content {
+  flex: 1.2;
+  text-align: left;
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.hero-imagem {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* Títulos e Textos do Hero */
+.hero h2 {
+  color: var(--cor-texto-principal);
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.hero h2 .destaque-verde {
+  color: var(--cor-primaria);
+}
+
+.hero p {
+  color: var(--cor-texto-secundario);
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Elemento visual principal: A Alminha Flutuante */
+.alma-flutuante {
+  max-width: 450px;
+  width: 100%;
+  filter: drop-shadow(0 0 30px rgba(16, 185, 129, 0.2));
+  animation: flutuar 3.5s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   2. SEÇÃO DE SOLUÇÃO (RESUMO E CARDS)
+   ========================================================================== */
+
+.solucao-resumo {
+  padding: 6rem 0;
+  background-color: var(--cor-fundo-card);
+}
+
+.secao-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.secao-header h3 {
+  font-size: 2.5rem;
+  color: var(--cor-texto-principal);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.secao-header p {
+  color: var(--cor-texto-secundario);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.cards-solucao {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.card-item {
+  padding: 3rem 2rem;
+  background: var(--cor-fundo-principal);
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid transparent;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.card-item:hover {
+  transform: translateY(-10px);
+  border-color: var(--cor-primaria);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.card-icone {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.card-item h4 {
+  color: var(--cor-texto-principal);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.card-item p {
+  color: var(--cor-texto-secundario);
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ==========================================================================
+   3. BOTÕES E COMPONENTES AUXILIARES
+   ========================================================================== */
+
+.solucao-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.btn-secundario {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  color: var(--cor-primaria);
+  border: 2px solid var(--cor-primaria);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-secundario:hover {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+  transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   4. ANIMAÇÕES (KEYFRAMES)
+   ========================================================================== */
+
+@keyframes flutuar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   5. RESPONSIVIDADE (MOBILE, TABLET E DESKTOP)
+   ========================================================================== */
+
+/* Layout funcional no Mobile (até 767px - Cobre perfeitamente o critério de 480px) */
+@media (max-width: 767px) {
+  .hero-layout {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    margin: 0 auto 2rem auto;
+    font-size: 1rem;
+  }
+
+  .alma-flutuante {
+    max-width: 250px;
+  }
+
+  .solucao-resumo {
+    padding: 4rem 0;
+  }
+
+  .secao-header h3 {
+    font-size: 2rem;
+  }
+}
+
+/* Layout adaptado para Tablet (≥768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-layout {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    margin: 0 auto 2rem auto;
+  }
+
+  .alma-flutuante {
+    max-width: 320px;
+  }
+}
+
+/* Layout consistente no Desktop (≥992px) */
+@media (min-width: 992px) {
+  /* No desktop, o comportamento já está garantido pelas regras base no topo do arquivo.
+     As travas de segurança (max-width: 1200px e justify-content: center) blindaram o design. */
+}
