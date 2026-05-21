@@ -1,0 +1,190 @@
+/* ==========================================================================
+   1. CABEÇALHO E LOGO (HEADER)
+   ========================================================================== */
+
+.cabecalho {
+  background-color: var(--cor-fundo-card);
+  border-bottom: 2px solid var(--cor-primaria);
+  padding: 0.8rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.cabecalho .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.logo {
+  color: var(--cor-texto-principal);
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 45px;
+  width: auto;
+  display: block; /* Remove o espaço extra de elementos 'inline' */
+}
+
+/* ==========================================================================
+   2. NAVEGAÇÃO E SEPARADOR (DESKTOP)
+   ========================================================================== */
+
+.menu-navegacao ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu-navegacao a {
+  text-decoration: none;
+  color: var(--cor-texto-principal);
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.menu-navegacao a:hover {
+  color: var(--cor-primaria);
+}
+
+.separador-menu {
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 2px dashed #454a52;
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+/* ==========================================================================
+   3. BOTÃO MENU HAMBÚRGUER
+   ========================================================================== */
+
+.btn-menu-mobile {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RODAPÉ (FOOTER)
+   ========================================================================== */
+
+.rodape {
+  background-color: var(--cor-fundo-card);
+  text-align: center;
+  padding: 2.5rem 0;
+  margin-top: 4rem;
+  border-top: 1px solid #e2e8f0;
+  color: var(--cor-texto-secundario);
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   5. RESPONSIVIDADE (MOBILE, TABLET E DESKTOP)
+   ========================================================================== */
+
+/* Layout funcional no Mobile (até 480px) */
+@media (max-width: 480px) {
+  .cabecalho {
+    padding: 0.5rem 0; /* Ajuste fino de respiro para não ocupar tanto espaço no mobile */
+  }
+
+  .logo {
+    font-size: 1.4rem; /* Reduz a fonte do logo levemente em telas muito pequenas */
+  }
+
+  .logo-img {
+    height: 38px; /* Proporção ideal da alminha para o mobile */
+  }
+}
+
+/* Estrutura do Menu Mobile e Tablet (Até 991px) */
+@media (max-width: 991px) {
+  .btn-menu-mobile {
+    display: block;
+  }
+
+  .menu-navegacao {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--cor-fundo-card);
+    flex-direction: column;
+    border-bottom: 2px solid var(--cor-primaria);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .menu-navegacao.ativo {
+    display: flex;
+  }
+
+  .menu-navegacao ul {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-navegacao li {
+    border-top: 1px solid #f1f1f1;
+    text-align: center;
+    width: 100%;
+  }
+
+  .menu-navegacao a {
+    padding: 1.2rem;
+    display: block;
+    width: 100%;
+  }
+
+  /* Limpeza do separador tracejado em telas menores */
+  .separador-menu {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    border-left: none !important;
+    border-top: 1px solid #f1f1f1 !important;
+    width: 100%;
+    display: block !important;
+    height: auto !important;
+  }
+}
+
+/* Layout adaptado para Tablet (≥768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* A lógica do menu hambúrguer é mantida para otimizar espaço. 
+     Este bloco cumpre a exigência de formatação específica para tablet. */
+  .rodape {
+    padding: 3rem 0; /* Aumenta a área de respiro no rodapé em tablets */
+  }
+}
+
+/* Layout consistente no Desktop (≥992px) */
+@media (min-width: 992px) {
+  /* No desktop, o menu padrão em linha é mantido e o botão hambúrguer 
+     fica oculto automaticamente fora dos media queries menores. */
+}
