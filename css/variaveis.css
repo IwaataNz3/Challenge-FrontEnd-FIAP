@@ -1,0 +1,20 @@
+:root {
+  /* Cores de Fundo */
+  --cor-fundo-principal: #f8fafc;
+  --cor-fundo-card: #ffffff;
+
+  /* Cores de Texto */
+  --cor-texto-principal: #1e293b;
+  --cor-texto-secundario: #64748b;
+
+  /* Cores de Identidade e Ação */
+  --cor-primaria: #10b981;
+  --cor-primaria-hover: #059669;
+
+  /* Cores de Gamificação e Apoio */
+  --cor-destaque-marco: #f59e0b;
+  --cor-suporte-b2b: #3b82f6;
+
+  /* Tipografia e Layout */
+  --fonte-principal: Arial, Helvetica, sans-serif;
+}
