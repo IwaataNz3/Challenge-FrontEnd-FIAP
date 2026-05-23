@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Configurações de codificação e responsividade da página -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Marcos e Conquistas - SoulUp EcoGuia</title>
+
+    <!-- Importação dos arquivos de estilização CSS -->
+    <link rel="stylesheet" href="../css/variaveis.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/header-footer.css" />
+    <link rel="stylesheet" href="../css/marcos.css" />
+  </head>
+
+  <body>
+    <!-- Cabeçalho com o logotipo e menu de navegação -->
+    <header class="cabecalho">
+      <div class="container">
+        <a href="../index.html" class="logo-link">
+          <img src="../img/alma.png" alt="Logo SoulUp" class="logo-img" />
+          <h1 class="logo">EcoGuia</h1>
+        </a>
+
+        <nav class="menu-navegacao">
+          <ul>
+            <li><a href="../html/index.html">Início</a></li>
+
+            <li><a href="../html/sobre.html">Sobre o Motor</a></li>
+
+            <li><a href="../html/faq.html">FAQ</a></li>
+
+            <li><a href="../html/contato.html">Contato</a></li>
+
+            <li><a href="../html/integrantes.html">Equipe</a></li>
+
+            <li class="separador-menu">
+              <a href="../html/solucao-dashboard.html"> Painel do Usuário </a>
+            </li>
+
+            <li><a href="../html/marcos.html">Marcos</a></li>
+          </ul>
+        </nav>
+
+        <button class="btn-menu-mobile">☰</button>
+      </div>
+    </header>
+
+    <!-- Área principal com a evolução da Aura Digital -->
+    <main class="container">
+      <section class="marcos-header">
+        <div class="header-titulo-flex">
+          <img src="../img/alma.png" alt="Alma SoulUp" class="alma-header" />
+
+          <h2>
+            Marcos de
+            <span class="destaque-verde">Reputação</span>
+          </h2>
+        </div>
+
+        <p>
+          Acompanhe a evolução da sua Aura Digital através de conquistas
+          validadas pelo motor.
+        </p>
+      </section>
+
+      <!-- Container estrutural do grid de conquistas -->
+      <section class="conquistas-container">
+        <div class="grid-marcos" id="lista-marcos">
+          <!-- Card 1 - Marco Desbloqueado e Validado -->
+          <article class="marco-card" data-status="desbloqueado">
+            <div class="icon-box">🏆</div>
+
+            <div class="marco-info">
+              <h4>Pioneiro Ecológico</h4>
+
+              <p>
+                Primeira ação de impacto positivo verificada e integrada com
+                sucesso ao sistema.
+              </p>
+
+              <div class="badge-status">Validado</div>
+            </div>
+          </article>
+
+          <!-- Card 2 - Marco Bloqueado com Barra de Progresso -->
+          <article class="marco-card" data-status="bloqueado">
+            <div class="icon-box">🔋</div>
+
+            <div class="marco-info">
+              <h4>Ciclo Fechado</h4>
+
+              <p>
+                Descarte de 10 itens eletrônicos via pontos de coleta parceiros
+                e certificados.
+              </p>
+
+              <div class="progresso-mini">
+                <div class="barra" style="width: 70%"></div>
+
+                <span>7/10 itens</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 - Marco Bloqueado em Análise Temporal -->
+          <article class="marco-card" data-status="bloqueado">
+            <div class="icon-box">✨</div>
+
+            <div class="marco-info">
+              <h4>Consistência Pura</h4>
+
+              <p>
+                Manter o nível de Aura máxima por 30 dias consecutivos sem
+                quedas de atividade.
+              </p>
+
+              <div class="badge-status">Em análise (12/30 dias)</div>
+            </div>
+          </article>
+
+          <!-- Card 4 - Marco Bloqueado com Progresso Inicial -->
+          <article class="marco-card" data-status="bloqueado">
+            <div class="icon-box">🌿</div>
+
+            <div class="marco-info">
+              <h4>Influenciador Verde</h4>
+
+              <p>
+                Contribuir para a validação de dados em 5 comunidades
+                diferentes.
+              </p>
+
+              <div class="progresso-mini">
+                <div class="barra" style="width: 20%"></div>
+
+                <span>1/5 redes</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="explicacao-tecnica">
+        <div class="header-explicacao">
+          <h3>Sobre os Marcos de Reputação</h3>
+        </div>
+        <div class="conteudo-explicacao">
+          <div class="bloco-texto">
+            <h4>O Problema</h4>
+            <p>
+              A falta de progressão clara e de registro histórico dificulta a
+              manutenção de práticas sustentáveis. Sem um sistema de validação
+              de constância e metas, a evasão e o abandono de hábitos ecológicos
+              por parte dos usuários são altos.
+            </p>
+          </div>
+          <div class="bloco-texto">
+            <h4>A Solução</h4>
+            <p>
+              O sistema de Marcos implementa trilhas de progressão baseadas em
+              regras de negócio do motor (ex: exigência de 30 dias de
+              constância). Ele automatiza a emissão de selos de validação,
+              exigindo recorrência para manter o status, o que garante a
+              retenção e o engajamento contínuo através de dados verificados.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé institucional -->
+    <footer class="rodape">
+      <div class="container">
+        <p>&copy; 2026 SoulUp - Monitoramento de Impacto Social</p>
+      </div>
+    </footer>
+    <button id="btn-voltar-topo" aria-label="Voltar ao topo">↑</button>
+    <!-- Scripts de comportamento dinâmico e menu -->
+    <script src="../js/menu.js"></script>
+    <script src="../js/marcos.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

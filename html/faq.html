@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Configurações de metadados e responsividade -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FAQ - SoulUp EcoGuia</title>
+
+    <!-- Importação das folhas de estilo do projeto -->
+    <link rel="stylesheet" href="../css/variaveis.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/header-footer.css" />
+    <link rel="stylesheet" href="../css/faq.css" />
+  </head>
+
+  <body>
+    <!-- Cabeçalho com o logotipo e menu de navegação -->
+    <header class="cabecalho">
+      <div class="container">
+        <a href="../index.html" class="logo-link">
+          <img src="../img/alma.png" alt="Logo SoulUp" class="logo-img" />
+          <h1 class="logo">EcoGuia</h1>
+        </a>
+
+        <nav class="menu-navegacao">
+          <ul>
+            <li><a href="../html/index.html">Início</a></li>
+
+            <li><a href="../html/sobre.html">Sobre o Motor</a></li>
+
+            <li><a href="../html/faq.html">FAQ</a></li>
+
+            <li><a href="../html/contato.html">Contato</a></li>
+
+            <li><a href="../html/integrantes.html">Equipe</a></li>
+
+            <li class="separador-menu">
+              <a href="../html/solucao-dashboard.html"> Painel do Usuário </a>
+            </li>
+
+            <li><a href="../html/marcos.html">Marcos</a></li>
+          </ul>
+        </nav>
+
+        <!-- Botão do menu mobile -->
+        <button class="btn-menu-mobile">☰</button>
+      </div>
+    </header>
+
+    <!-- Conteúdo principal da página de FAQ -->
+    <main class="container">
+      <!-- Cabeçalho da seção de dúvidas -->
+      <section class="faq-header">
+        <h2>
+          Dúvidas
+          <span class="destaque-verde">Frequentes</span>
+        </h2>
+
+        <p>
+          Esclareça os principais pontos sobre o funcionamento técnico do Motor
+          de Reputação.
+        </p>
+      </section>
+
+      <!-- Lista sanfonada de perguntas e respostas -->
+      <section class="faq-lista">
+        <!-- Item de FAQ 1 -->
+        <div class="faq-item">
+          <button class="faq-pergunta">
+            Como o Motor valida os dados de atividade?
+            <span>+</span>
+          </button>
+
+          <div class="faq-resposta">
+            <p>
+              O motor utiliza os próprios registros brutos de atividades
+              sustentáveis. Esses dados passam por uma camada de validação que
+              verifica a autenticidade da ação antes de convertê-la em pontos de
+              reputação para a Aura Digital.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item de FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-pergunta">
+            A reputação é vitalícia ou pode expirar?
+            <span>+</span>
+          </button>
+
+          <div class="faq-resposta">
+            <p>
+              A reputação social no SoulUp é dinâmica. O algoritmo de manutenção
+              exige que o usuário mantenha uma frequência mínima de atividades.
+              Longos períodos de inatividade resultam em uma redução gradual do
+              brilho da Aura, incentivando a consistência ambiental.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item de FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-pergunta">
+            Qual a função técnica da Alma Digital?
+            <span>+</span>
+          </button>
+
+          <div class="faq-resposta">
+            <p>
+              Tecnicamente, a Alma Digital é um componente visual que traduz
+              variáveis complexas do banco de dados (como volume de carbono
+              evitado ou recorrência de descarte) em um estado visual
+              compreensível, facilitando a percepção de progresso do usuário.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item de FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-pergunta">
+            Os "Marcos de Aura" influenciam no sistema?
+            <span>+</span>
+          </button>
+
+          <div class="faq-resposta">
+            <p>
+              Sim. Ao atingir determinados patamares de pontuação processados
+              pelo motor, o usuário desbloqueia novos estados para seu avatar e
+              registra conquistas permanentes em seu histórico de reputação
+              social verificado.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé principal -->
+    <footer class="rodape">
+      <div class="container">
+        <p>&copy; 2026 SoulUp - Projeto de Engenharia Front-End</p>
+      </div>
+    </footer>
+    <button id="btn-voltar-topo" aria-label="Voltar ao topo">↑</button>
+    <!-- Importação dos scripts de interação -->
+    <script src="../js/menu.js"></script>
+    <script src="../js/faq.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
