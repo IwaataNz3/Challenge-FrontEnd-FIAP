@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Configurações de metadados e importação de CSS -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contato - SoulUp EcoGuia</title>
+
+    <link rel="stylesheet" href="../css/variaveis.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/header-footer.css" />
+    <link rel="stylesheet" href="../css/contato.css" />
+  </head>
+
+  <body>
+    <!-- Cabeçalho com logo e menu de navegação -->
+    <header class="cabecalho">
+      <div class="container">
+        <a href="../index.html" class="logo-link">
+          <img src="../img/alma.png" alt="Logo SoulUp" class="logo-img" />
+          <h1 class="logo">EcoGuia</h1>
+        </a>
+
+        <nav class="menu-navegacao">
+          <ul>
+            <li><a href="../html/index.html">Início</a></li>
+
+            <li><a href="../html/sobre.html">Sobre o Motor</a></li>
+
+            <li><a href="../html/faq.html">FAQ</a></li>
+
+            <li><a href="../html/contato.html">Contato</a></li>
+
+            <li><a href="../html/integrantes.html">Equipe</a></li>
+
+            <li class="separador-menu">
+              <a href="../html/solucao-dashboard.html"> Painel do Usuário </a>
+            </li>
+
+            <li><a href="../html/marcos.html">Marcos</a></li>
+          </ul>
+        </nav>
+
+        <!-- Botão do menu mobile -->
+        <button class="btn-menu-mobile">☰</button>
+      </div>
+    </header>
+
+    <!-- Conteúdo principal da página de contato -->
+    <main class="container">
+      <!-- Cabeçalho introdutório da página -->
+      <section class="contato-header">
+        <div class="header-titulo-flex">
+          <img src="../img/alma.png" alt="Alma EcoGuia" class="alma-header" />
+
+          <h2>
+            Fale com a
+            <span class="destaque-verde">EcoGuia</span>
+          </h2>
+        </div>
+
+        <p>
+          Dúvidas sobre o Motor de Reputação ou sua evolução? Envie uma
+          mensagem.
+        </p>
+      </section>
+
+      <!-- Seção com formulário e informações de contato -->
+      <section class="contato-corpo">
+        <div class="form-container">
+          <!-- Formulário de envio de mensagens -->
+          <form action="#" method="POST" class="form-contato">
+            <div class="input-group">
+              <label for="nome">Nome Completo</label>
+
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Seu nome"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="email">E-mail</label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="seu@email.com"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="assunto">Assunto</label>
+
+              <select id="assunto" name="assunto">
+                <option value="duvida">Dúvida Técnica</option>
+
+                <option value="sugestao">Sugestão de Melhoria</option>
+
+                <option value="erro">Relatar Erro no Motor</option>
+
+                <option value="outro">Outros</option>
+              </select>
+            </div>
+
+            <div class="input-group">
+              <label for="mensagem">Mensagem</label>
+
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="5"
+                placeholder="Como podemos ajudar?"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+          </form>
+        </div>
+
+        <!-- Cards laterais com dados de atendimento -->
+        <div class="contato-info">
+          <div class="info-card">
+            <h4>Canais de Atendimento</h4>
+
+            <p>
+              <strong>E-mail:</strong>
+              contato@ecoguia.com.br
+            </p>
+
+            <p>
+              <strong>Suporte:</strong>
+              suporte@ecoguia.com.br
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h4>Localização</h4>
+
+            <p>Av. Lins de Vasconcelos, 1222 - Aclimação, São Paulo</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé do site e scripts -->
+    <footer class="rodape">
+      <div class="container">
+        <p>&copy; 2026 SoulUp - Suporte ao Usuário</p>
+      </div>
+    </footer>
+    <button id="btn-voltar-topo" aria-label="Voltar ao topo">↑</button>
+    <script src="../js/menu.js"></script>
+    <script src="../js/contato.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

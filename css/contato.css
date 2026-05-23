@@ -1,0 +1,234 @@
+/* ==========================================================================
+   1. CABEÇALHO E TÍTULOS
+   ========================================================================== */
+
+.contato-header {
+  text-align: center;
+  padding: 5rem 0 3rem;
+}
+
+.header-titulo-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 1rem;
+}
+
+.contato-header h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0;
+  color: var(--cor-texto-principal);
+}
+
+.contato-header p {
+  color: var(--cor-texto-secundario);
+  font-size: 1.1rem;
+}
+
+.destaque-verde {
+  color: var(--cor-primaria);
+}
+
+/* ==========================================================================
+   2. ESTRUTURA DO CORPO (GRID)
+   ========================================================================== */
+
+.contato-corpo {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  margin-bottom: 5rem;
+  align-items: start;
+}
+
+/* ==========================================================================
+   3. FORMULÁRIO DE CONTATO
+   ========================================================================== */
+
+.form-container {
+  background-color: var(--cor-fundo-card);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-weight: 700;
+  color: var(--cor-texto-principal);
+  font-size: 0.95rem;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.btn-enviar {
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #0d9488;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+}
+
+/* ==========================================================================
+   4. INFORMAÇÕES LATERAIS (CARDS)
+   ========================================================================== */
+
+.contato-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-card {
+  background-color: #f8fafc;
+  padding: 2rem;
+  border-radius: 15px;
+  border-left: 5px solid var(--cor-primaria);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateX(10px);
+}
+
+.info-card h4 {
+  color: var(--cor-primaria);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-card p {
+  margin-bottom: 0.5rem;
+  color: var(--cor-texto-secundario);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   5. ANIMAÇÕES E FEEDBACK VISUAL
+   ========================================================================== */
+
+.alma-header {
+  height: 80px;
+  width: auto;
+  filter: drop-shadow(0 0 15px rgba(16, 185, 129, 0.2));
+  animation: flutuarCurto 3s ease-in-out infinite;
+}
+
+.erro-feedback {
+  display: block;
+  animation: fadeInError 0.3s ease;
+}
+
+@keyframes fadeInError {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes flutuarCurto {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ==========================================================================
+   6. RESPONSIVIDADE (MOBILE E TABLET)
+   ========================================================================== */
+
+/* Engloba telas menores que 991px (Tablets, Celulares e Janelas Estreitas) */
+@media (max-width: 480px) {
+  .contato-corpo {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .header-titulo-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contato-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .contato-info {
+    order: -1; /* Joga os cards de contato para cima do formulário */
+  }
+
+  .info-card:hover {
+    transform: none;
+  }
+}
+
+/* Layout adaptado para Tablet (≥768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .contato-corpo {
+    grid-template-columns: 1fr; /* Garante que o formulário não esprema na janela intermediária */
+    gap: 2rem;
+  }
+
+  .header-titulo-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contato-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .contato-info {
+    order: -1;
+  }
+
+  .info-card:hover {
+    transform: none;
+  }
+}
+
+/* Layout consistente no Desktop (≥992px) */
+@media (min-width: 992px) {
+  /* O layout global (fora dos media queries) já atua como desktop.
+     Este bloco está declarado para manter a consistência com a documentação do projeto. */
+}
