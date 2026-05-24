@@ -59,10 +59,15 @@
   font-weight: bold;
   font-size: 0.95rem;
   transition: color 0.3s ease;
+  position: relative;
 }
 
 .menu-navegacao a:hover {
   color: var(--cor-primaria);
+}
+
+.menu-navegacao a.ativo {
+  color: var(--cor-primaria); /* Usa a sua variável correta */
 }
 
 .separador-menu {
@@ -160,6 +165,10 @@
     padding: 1.2rem;
     display: block;
     width: 100%;
+  }
+
+  .menu-navegacao a.ativo {
+    color: var(--cor-primaria);
   }
 
   /* Limpeza do separador tracejado em telas menores */
