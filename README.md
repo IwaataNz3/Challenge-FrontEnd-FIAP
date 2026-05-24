@@ -47,6 +47,11 @@ Sistema de Marcos implementando trilhas de progressão baseadas nas regras de ne
 ## Link do Repositório
 https://github.com/IwaataNz3/Entrega-Front-Challenge
 
+
+## Link do Vídeo de Apresentação do Projeto
+https://drive.google.com/file/d/1ucyjl8F2QDYA_pjLn9uUn3sSExdJXWzP/view?usp=sharing
+
+
 ## Contato
 E-mail Dúvidas Gerais: rm573723@fiap.com.br
 Suporte Técnico: rm574105@fiap.com.br  
