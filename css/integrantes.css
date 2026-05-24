@@ -1,0 +1,147 @@
+/* ==========================================================================
+   1. CABEÇALHO DA EQUIPE
+   ========================================================================== */
+
+.equipe-header {
+  text-align: center;
+  padding: 5rem 0 3rem;
+}
+
+.equipe-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.equipe-header p {
+  color: var(--cor-texto-secundario);
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* ==========================================================================
+   2. ESTRUTURA DO GRID
+   ========================================================================== */
+
+.equipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 5rem;
+}
+
+/* ==========================================================================
+   3. CARDS DE MEMBROS, AVATARES E RM
+   ========================================================================== */
+
+.membro-card {
+  background-color: var(--cor-fundo-card);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.membro-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--cor-primaria);
+  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.1);
+}
+
+.membro-foto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Garante o formato circular */
+  object-fit: cover;   /* O segredo: corta a foto sem esticar */
+  border: 3px solid var(--cor-primaria);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.membro-card:hover .membro-foto {
+  transform: scale(1.1); /* Efeito de zoom elegante no hover */
+}
+
+/* Efeito de hover no avatar sincronizado com o card */
+.membro-card:hover .membro-avatar {
+  border-color: var(--cor-primaria);
+}
+
+.membro-card h3 {
+  color: var(--cor-texto-principal);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Estilização do RM e da Turma */
+.atrib-integrantes {
+  color: var(--cor-primaria);
+  font-weight: 800;
+  font-size: 0.9rem;
+  background-color: rgba(16, 185, 129, 0.1);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+}
+
+/* ==========================================================================
+   4. REDES SOCIAIS (LINKEDIN E GITHUB)
+   ========================================================================== */
+
+.redes-sociais {
+  display: flex;
+  gap: 10px;
+  margin-top: 0.5rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.link-social {
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cor-texto-secundario);
+  background-color: #f1f5f9;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.link-social:hover {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   5. RESPONSIVIDADE (MOBILE, TABLET E DESKTOP)
+   ========================================================================== */
+
+/* Layout funcional no Mobile (até 480px) */
+@media (max-width: 480px) {
+  .equipe-grid {
+    grid-template-columns: 1fr; /* Força 1 coluna no mobile */
+  }
+
+  .equipe-header {
+    padding: 3rem 0 2rem;
+  }
+
+  .equipe-header h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Layout adaptado para Tablet (≥768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* O comportamento auto-fit do grid já cuida dos tablets. */
+}
+
+/* Layout consistente no Desktop (≥992px) */
+@media (min-width: 992px) {
+  /* O grid original já fornece um layout consistente para desktops sem regressões. */
+}
