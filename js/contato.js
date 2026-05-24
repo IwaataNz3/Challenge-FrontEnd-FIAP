@@ -36,11 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // 5. Checagem Final
-    if (temErro) {
-      // Impede o envio do formulário e exibe apenas os textos vermelhos
-      e.preventDefault();
+    // Bloqueia SEMPRE o envio padrão da página para não redirecionar
+    e.preventDefault(); 
+    
+    if (!temErro) {
+      // Se não houver erro, exibe o alerta de sucesso e limpa o formulário
+      alert("Mensagem enviada com sucesso!");
+      form.reset();
     }
-    // Se não houver erro, o formulário simplesmente envia os dados (sem popup)
   });
 
   // Função minimalista para inserir o texto em vermelho
