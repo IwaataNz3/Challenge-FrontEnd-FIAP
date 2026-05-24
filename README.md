@@ -38,7 +38,11 @@ Rafael Santos Dias (RM: 574105)
 Victor Felipe Silva Alencar (RM: 574057)
 
 ## Imagens e Representação do Projeto
+Painel de monitoramento de dados em tempo real e conversão de métricas do usuário.
+![Painel do Usuário - Dashboard](/img/painel-usuario.png)
 
+Sistema de Marcos implementando trilhas de progressão baseadas nas regras de negócio do motor.
+![Painel de Marcos ](/img/marcos.png)
 
 ## Link do Repositório
 https://github.com/IwaataNz3/Entrega-Front-Challenge
