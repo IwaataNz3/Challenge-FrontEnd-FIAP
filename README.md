@@ -45,7 +45,7 @@ Sistema de Marcos implementando trilhas de progressão baseadas nas regras de ne
 ![Painel de Marcos ](/img/marcos.png)
 
 ## Link do Repositório
-https://github.com/IwaataNz3/Entrega-Front-Challenge
+https://github.com/IwaataNz3/Challenge-FrontEnd-FIAP
 
 
 ## Link do Vídeo de Apresentação do Projeto
